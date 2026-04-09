@@ -1,0 +1,679 @@
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("../fonts/ethnocentric/ethnocentric rg.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("../fonts/ethnocentric/ethnocentric rg it.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../fonts/ethnocentric/Poppins-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../fonts/ethnocentric/Poppins-Bold.ttf") format("ttf");
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ethnocentric";
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  color: #dfe7ef;
+  background-color: #071224; /* deep navy background for futuristic look */
+}
+
+.layout_padding {
+  padding: 75px 0;
+}
+
+.layout_padding2 {
+  padding: 45px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 45px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 45px;
+}
+
+.layout_padding-top {
+  padding-top: 75px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 75px;
+}
+
+.custom_heading {
+  position: relative;
+}
+
+/* Show the heading logo only on the hero (start) area */
+.hero_area .custom_heading::before {
+  position: absolute;
+  content: "";
+  left: -45px;
+  width: 90px;
+  height: 90px;
+  background-image: url(../images/logogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 5;
+}
+
+/*header section*/
+.hero_area {
+  height: 98vh;
+  background-image: url(../images/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sub_page .hero_area {
+  height: auto;
+}
+
+.hero_area.sub_pages {
+  height: auto;
+}
+
+.header_section .container-fluid {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.header_section .nav_container {
+  margin: 0 auto;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px 30px;
+  color: #cfe8ff;
+  text-align: center;
+  text-transform: none;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  text-transform: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.custom_nav-container .nav_search-btn {
+  background-image: url(../images/search-icon.png);
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+}
+
+.navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  margin-right: 0;
+}
+
+.navbar-brand img {
+  width: 64px;
+}
+
+/* Make the logo much larger in the hero (start) area so it stands out */
+.hero_area .navbar-brand img {
+  width: 320px;
+  height: auto;
+  max-width: none;
+  transition: width 220ms ease, transform 220ms ease;
+}
+
+/* make sure more specific selector overrides other global rules */
+.hero_area .header_section .navbar-brand img {
+  width: 320px;
+  max-width: none;
+}
+
+/* specific hero-start-logo used in index.html when we want only the start page to show large logo */
+.hero-start-logo {
+  width: 380px;
+  height: auto;
+  display: inline-block;
+}
+
+/* Hide the large header logo on sub pages (show only on the homepage) */
+body.sub_page .hero-start-logo {
+  display: none;
+}
+
+/* Also hide the pseudo-element logo on sub pages */
+body.sub_page .custom_heading::before {
+  display: none;
+}
+
+/* Responsive: scale down logo on small screens so navbar still fits */
+@media (max-width: 1200px) {
+  .hero_area .navbar-brand img,
+  .hero_area .header_section .navbar-brand img {
+    width: 320px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero_area .navbar-brand img,
+  .hero_area .header_section .navbar-brand img {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero_area .navbar-brand img,
+  .hero_area .header_section .navbar-brand img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_area .navbar-brand img,
+  .hero_area .header_section .navbar-brand img {
+    width: 110px;
+  }
+}
+
+.navbar-brand span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #cfe8ff;
+  font-family: "Ethnocentric";
+}
+
+.custom_nav-container {
+  z-index: 99999;
+  padding: 15px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom_nav-container .navbar-toggler {
+  outline: none;
+}
+
+.custom_nav-container .navbar-toggler .navbar-toggler-icon {
+  background-image: url(../images/menu.png);
+  background-size: 35px;
+}
+
+/*end header section*/
+.hero_section {
+  text-align: center;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 75%;
+}
+
+.hero_section h1 {
+  font-size: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.hero_section .hero_btn-box a {
+  display: inline-block;
+  padding: 12px 55px;
+  background-color: transparent;
+  border: 1.5px solid #cfe8ff;
+  color: #cfe8ff;
+  margin-top: 55px;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+
+.hero_section .hero_btn-box a:hover {
+  background-color: #cfe8ff;
+  color: #071224;
+}
+
+.sub_page .about_section .about_container {
+  margin-top: 0;
+}
+
+.about_section .about_container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 75px 45px;
+  background-image: url(../images/nba.jpg);
+  background-size: auto 90%;
+  background-color: #0b1624; /* dark section surface */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -150px;
+  -webkit-box-shadow: 0 6px 30px rgba(2,8,23,0.6);
+  box-shadow: 0 6px 30px rgba(2,8,23,0.6);
+}
+
+.about_section .about_container .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about_section .about_container .container > div {
+  width: 46%;
+}
+
+.about_section .detail a {
+  display: inline-block;
+  padding: 14px 35px;
+  background-color: 000080;
+  border: 1.5px solid #0b3b66;
+  color: #cfe8ff;
+  margin-top: 75%;
+  border-radius: 6px;
+}
+
+.about_section .detail a:hover {
+  background-color: #0b3b66;
+  color: #ffffff;
+}
+
+.about_section .detail-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.product_section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product_section .img-box {
+  margin: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product_section .img-box img {
+  width: 100%;
+}
+
+.product_section .img-box.box-1, .product_section .img-box.box-3 {
+  width: 43%;
+}
+
+.product_section .img-box.box-2, .product_section .img-box.box-4 {
+  width: 53%;
+}
+
+.product_section a {
+  display: inline-block;
+  padding: 14px 35px;
+  background-color: 000080;
+  border: 1.5px solid #0b3b66;
+  color: #cfe8ff;
+  border-radius: 6px;
+}
+
+.product_section a:hover {
+  background-color: #0b3b66;
+  color: #ffffff;
+}
+
+/* Ensure centered CTA links (See More / Read More) are clearly visible */
+.product_section .d-flex.justify-content-center a,
+.product_section .d-flex a {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: transparent;
+  border: 1.5px solid #0b3b66;
+  color: #cfe8ff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 20px 0;
+  transition: background-color 180ms ease, color 180ms ease, transform 160ms ease;
+}
+
+.product_section .d-flex.justify-content-center a:hover,
+.product_section .d-flex a:hover {
+  background-color: #cfe8ff;
+  color: #071224;
+  transform: translateY(-2px);
+}
+
+.why_section .why_container .img_box {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.why_section .why_container .img_box img {
+  width: 100%;
+}
+
+.why_section a {
+  display: inline-block;
+  padding: 14px 35px;
+  background-color: transparent;
+  border: 1.5px solid #0b3b66;
+  color: #cfe8ff;
+  border-radius: 6px;
+}
+
+.why_section a:hover {
+  background-color: #0b3b66;
+  color: #ffffff;
+}
+
+.contact_section {
+  color: #fff;
+  background: url(../images/fondo2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact_section h2::before {
+  background-image: url(../images/herbal-white.png);
+}
+
+.contact_section input {
+  width: 100%;
+  border: 0;
+  height: 50px;
+  border-radius: 30px;
+  margin: 20px 0;
+  padding-left: 25px;
+  background-color: #0f1b2a;
+  outline: none;
+  color: #dfe7ef;
+}
+
+.contact_section input::-webkit-input-placeholder {
+  color: #8f9aa6;
+}
+
+.contact_section input:-ms-input-placeholder {
+  color: #8f9aa6;
+}
+
+.contact_section input::-ms-input-placeholder {
+  color: #8f9aa6;
+}
+
+.contact_section input::placeholder {
+  color: #8f9aa6;
+}
+
+.contact_section input.message-box {
+  height: 150px;
+}
+
+.contact_section button {
+  background-color: #0b3b66;
+  padding: 15px 55px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  border: 1px solid #0b3b66;
+  color: #f5f7fa;
+  font-weight: bold;
+}
+
+.contact_section button:hover {
+  color: #0b3b66;
+  background-color: transparent;
+}
+
+.client_section .client_container {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.client_section .img_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 225px;
+  min-height: 225px;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#0b3b66), to(#39424a));
+  background: linear-gradient(to right, #0b3b66, #39424a);
+  margin-right: 15px;
+}
+
+.client_section .img_box img {
+  width: 75%;
+}
+
+.client_section .detail_box {
+  padding: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0b3b66), to(#39424a));
+  background: linear-gradient(to bottom, #0b3b66, #39424a);
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.client_section .detail_box h5 {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 35px;
+}
+
+.client_section .carousel-indicators {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90%;
+  margin: 0 auto;
+  bottom: 30px;
+}
+
+.client_section .carousel-indicators li {
+  background-color: #6c6c6c;
+  margin: 0;
+  height: 15px;
+  width: 35px;
+  opacity: 1;
+}
+
+.client_section .carousel-indicators li.active {
+  background-color: #ffffff;
+}
+
+.info_section {
+  background-image: url(../images/fondo2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.info_section .logo-box {
+  width: 200px;
+  margin: 0 auto 75px auto;
+}
+
+.info_section .logo-box img {
+  width: 100%;
+}
+
+.info_items {
+  width: 65%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info_items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.info_items .item .img-box {
+  width: 50px;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+.info_items .item .img-box img {
+  width: 100%;
+}
+
+.info_items .item .detail-box {
+  margin-top: 10px;
+  color: #222222;
+}
+
+.info_items {
+  position: relative;
+}
+
+.info_items a {
+  position: relative;
+}
+
+/* footer section*/
+.footer_section {
+  background-color: #ffffff;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.footer_section p {
+  color: #222222;
+  margin: 0;
+  text-align: center;
+}
+
+.footer_section a {
+  color: #222222;
+}
+
+/* end footer section*/
+/*# sourceMappingURL=style.css.map */
